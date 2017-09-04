@@ -64,9 +64,9 @@ function simplePie4WP ($atts = [], $content = null) {
 		$feed->enable_order_by_date(false);
 	}
 	
-	$feed->set_cache_location(ABSPATH .'wp-content/plugins/simplePie4WP/cache');
+	$feed->set_cache_location(ABSPATH .'wp-content/plugins/simplePie4WP/library/SimplePie/Cache');
 	$feed->enable_cache(false);
-
+	$feed->set_cache_duration(60);
 	$feed->set_item_limit(50);
 
 	/* @@ Trigger force-feed
@@ -120,8 +120,7 @@ function simplePie4WP ($atts = [], $content = null) {
 
 			// <!-- Let's begin looping through each individual news item in the feed. -->
 			foreach($feed->get_items() as $item) {
-				//print_r($item);
-				
+
 				$result .= '<div class="RSSitem">';
 
 				//<!-- If the item has a permalink back to the original post (which 99% of them do), link the item's title to it. -->
@@ -176,6 +175,6 @@ function simplePie4WP ($atts = [], $content = null) {
 	return $result ;	
 }
 
-add_shortcode('RSSfeed','simplePie4WP'); 
+add_shortcode('RSSfeed','simplePie4WP');
 
-
+//add_filter( 'wp_feed_cache_transient_lifetime', create_function( '$a', 'return 60;' ) );
