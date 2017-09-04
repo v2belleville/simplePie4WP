@@ -1,7 +1,6 @@
 # simplePie4WP
 
 WordPress plugin based on http://simplepie.org Version 1.5, adapted to be used with wordpress short codes
-Author URI: http://www.e-tissage.net
 
 shortcode atts
 	feedurl mandatory
