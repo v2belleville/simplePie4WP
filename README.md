@@ -1,6 +1,8 @@
 # simplePie4WP
 
-WordPress plugin based on http://simplepie.org Version 1.5, adapted to be used with wordpress short codes
+WordPress plugin based on http://simplepie.org Version 1.5, adapted to be used with wordpress short codes.
+
+Specific display for twitter items generated with Inoreader.
 
 shortcode atts :  
 	feedurl mandatory  
